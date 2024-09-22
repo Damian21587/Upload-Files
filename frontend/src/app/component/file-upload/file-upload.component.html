@@ -1,0 +1,13 @@
+<div class="file-upload">
+    <button mat-raised-button color="primary" (click)="fileInput.click()">Seleccionar Archivo</button>
+    <input type="file" #fileInput (change)="onFileSelected($event)" accept=".jpg,.jpeg,.png,.gif,.pdf" hidden>
+    <div ngIf="file">
+      <p>Archivo seleccionado: {{ file?.name }}</p>
+      <button mat-raised-button color="accent" (click)="uploadFile()" [disabled]="fileError">Subir Archivo </button>
+    </div>
+  </div>
+  <!-- <div ngIf="fileError" class="error">
+    <p>{{ fileError }}</p>
+  </div> -->
+  
+  
