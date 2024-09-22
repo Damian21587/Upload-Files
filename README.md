@@ -25,8 +25,23 @@ Instalar dependencias
 3- En directorio Frontend
    npm install -g @angular/cli
    ng add @angular/material
-   ng add @angular/ssr
+   ng add @nguniversal/express-engine
    npm install @auth0/angular-jw
+   ng add @angular/ssr
+
+4- Despliegue en Firebase Hosting para el frontend
+   npm install -g firebase-tools
+   Navega a la carpeta de tu proyecto Angular y ejecuta: npm install -g firebase-tools
+   Selecciona “Hosting: Configure and deploy Firebase Hosting sites”.
+    Elige el proyecto de Firebase que deseas usar.
+    Define el directorio público como dist/upload-files.
+    Responde “No” a la configuración de una aplicación de una sola página (SPA) si no estás seguro.
+   Construye tu aplicación Angular para producción:  ng build --prod
+   Finalmente, despliega tu aplicación en Firebase Hosting: firebase deploy
+    
+
+   
+   
    
    
    
